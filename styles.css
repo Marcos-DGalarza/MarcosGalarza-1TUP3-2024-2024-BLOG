@@ -1,0 +1,253 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a86127;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    margin: auto;
+    background-color: #2e295f;
+    color: white;
+    position: relative;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
+}
+
+.logo img {
+    max-height: 70px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 20px 10px;
+    transition: all 500ms;
+}
+
+.menu a:hover {
+    background-color: #2892e9dc;
+    color: #2e295f;
+}
+
+.menu .seleccionado {
+    border-bottom: 2px solid #007bff;
+    border-top: 2px solid #007bff;
+    padding: 25px 15px;
+    font-size: 1.2em;
+}
+
+.menu .seleccionado:hover {
+    background-color: #2892e9dc;
+    color: #2e295f;
+    text-decoration: none;
+}
+
+.buscador {
+    display: flex;
+    align-items: center;
+
+}
+
+.buscador input {
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.buscador button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.buscador button:hover {
+    background-color: #0056b3;
+}
+
+.mainContent {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 20px;
+}
+
+.articulos {
+    margin-right: 20px;
+}
+
+.articulos_item {
+    background-color: #f0eab7;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+.articulos_item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.comentarios {
+    margin-top: 20px;
+}
+
+.comentarios textarea {
+    width: 50%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+
+.barra_lateral_lista {
+    background-color:  #eed80e4d;
+    padding: 5px 15px 22px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.mainContent .barra_lateral a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 500ms;
+}
+
+.mainContent .barra_lateral a:hover {
+    color: #2e295f;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2e295f;
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
+
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 500ms;
+}
+
+footer a:hover{
+    color: #007bff;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 0;
+        font-size: small;
+    }
+
+    .menu a , .menu .seleccionado{
+        padding: 5px;
+        margin: 15px;
+    }
+
+    .buscador {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .mainContent {
+        display: block;
+        padding: 10px;
+    }
+
+    .articulos, .barra_lateral {
+        width: 100%;
+        margin: 0;
+    }
+
+    .comentarios textarea {
+        width: 100%;
+    }
+
+    .articulos {
+        font-size: small;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 975px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .menu {
+        font-size: small;
+    }
+
+    .buscador , h1 {
+        padding-left: 40px;
+    }
+
+    .articulos {
+        font-size: medium;
+    }
+}
+
+@media (min-width: 975px) and (max-width: 1067px) {
+    header {
+        padding: 25px 30px;
+    
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .mainContent {
+        grid-template-columns: 2fr 1fr;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 1067px) {
+    header {
+        padding: 30px 40px;
+        font-size: large;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    .mainContent {
+        grid-template-columns: 3fr 1fr;
+        padding: 20px;
+        font-size: large;
+    }
+}
